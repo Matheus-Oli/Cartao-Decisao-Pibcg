@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cartão de Decisão - Primeira Igreja Batista de Campo Grande</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="page">
+  <div class="container">
+    <header class="header">
+      <div class="header__logo-container">
+        <div class="header__logo">
+          <img src="PIBCG.png" alt="PIBCG Logo" class="header__logo-img">
+        </div>
+        <div class="header__title">
+          <h1 class="header__heading">Primeira Igreja Batista</h1>
+          <h2 class="header__subheading">em Campo Grande</h2>
+          <p class="header__motto">"Crescendo Através do Amor"</p>
+          <p class="header__verse">Cl 3.14</p>
+        </div>
+      </div>
+      <div class="header__info">
+        <p class="header__info-text">Av. Getúlio Vargas, 105</p>
+        <p class="header__info-text">Campo Grande, Cariacica-ES</p>
+        <p class="header__info-text">Tel.: (27) 996646076</p>
+        <p class="header__info-text">https://pibcg.com.br</p>
+      </div>
+    </header>
+
+    <h2 class="form__title">Cartão de Decisão</h2>
+
+    <form id="decision-form" class="form">
+      <div class="form-pages">
+        <!-- Página 1 - Informações Pessoais -->
+        <div class="form-page" id="page1">
+          <div class="form-section">
+            <div class="form-field">
+              <label for="nome">Nome:</label>
+              <input type="text" id="nome" name="nome" required>
+            </div>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label for="data-nascimento">Data de Nascimento:</label>
+                <input type="date" id="data-nascimento" name="data-nascimento">
+              </div>
+              <div class="form-field gender-field">
+                <label>Sexo:</label>
+                <div class="radio-group">
+                  <label class="radio-label">
+                    <input type="radio" name="sexo" value="F" id="sexo-f"> F
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" name="sexo" value="M" id="sexo-m"> M
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="endereco">Endereço:</label>
+              <input type="text" id="endereco" name="endereco">
+            </div>
+
+            <div class="form-row">
+              <div class="form-field small">
+                <label for="numero">N°:</label>
+                <input type="text" id="numero" name="numero">
+              </div>
+              <div class="form-field small">
+                <label for="bloco">Bl:</label>
+                <input type="text" id="bloco" name="bloco">
+              </div>
+              <div class="form-field small">
+                <label for="apto">Apto:</label>
+                <input type="text" id="apto" name="apto">
+              </div>
+              <div class="form-field">
+                <label for="conjunto">Conjunto:</label>
+                <input type="text" id="conjunto" name="conjunto">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label for="cep">CEP:</label>
+                <input type="text" id="cep" name="cep">
+              </div>
+              <div class="form-field">
+                <label for="bairro">Bairro:</label>
+                <input type="text" id="bairro" name="bairro">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label for="cidade">Cidade:</label>
+                <input type="text" id="cidade" name="cidade">
+              </div>
+              <div class="form-field small">
+                <label for="uf">UF:</label>
+                <input type="text" id="uf" name="uf" maxlength="2">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label for="telefone">Fone:</label>
+                <input type="tel" id="telefone" name="telefone">
+              </div>
+              <div class="form-field">
+                <label for="whatsapp">WhatsApp:</label>
+                <input type="tel" id="whatsapp" name="whatsapp">
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email">
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h3>Visitante?</h3>
+            <div class="checkbox-group">
+              <label class="checkbox-label">
+                <input type="radio" name="visita" value="1"> 1ª vez
+              </label>
+              <label class="checkbox-label">
+                <input type="radio" name="visita" value="2"> 2ª vez
+              </label>
+              <label class="checkbox-label">
+                <input type="radio" name="visita" value="3"> 3ª vez
+              </label>
+              <label class="checkbox-label">
+                <input type="radio" name="visita" value="mais"> mais de 3 vezes
+              </label>
+            </div>
+
+            <div class="checkbox-group">
+              <label class="checkbox-label">
+                <input type="radio" name="tipo_visitante" value="evangelico"> visitante evangélico
+              </label>
+              <label class="checkbox-label">
+                <input type="radio" name="tipo_visitante" value="novo"> novo convertido
+              </label>
+              <label class="checkbox-label">
+                <input type="radio" name="tipo_visitante" value="afastado"> afastado
+              </label>
+              <label class="checkbox-label">
+                <input type="radio" name="tipo_visitante" value="frequentador"> frequentador
+              </label>
+            </div>
+
+            <h3>Faixa etária</h3>
+            <div class="checkbox-group">
+              <label class="checkbox-label">
+                <input type="radio" name="faixa_etaria" value="crianca"> Criança
+              </label>
+              <label class="checkbox-label">
+                <input type="radio" name="faixa_etaria" value="junior"> Junior
+              </label>
+              <label class="checkbox-label">
+                <input type="radio" name="faixa_etaria" value="adolescente"> Adolescente
+              </label>
+              <label class="checkbox-label">
+                <input type="radio" name="faixa_etaria" value="jovem"> Jovem
+              </label>
+              <label class="checkbox-label">
+                <input type="radio" name="faixa_etaria" value="adulto"> Adulto
+              </label>
+              <label class="checkbox-label">
+                <input type="radio" name="faixa_etaria" value="idoso"> Idoso
+              </label>
+            </div>
+
+            <h3>Estado Civil</h3>
+            <div class="checkbox-group">
+              <label class="checkbox-label">
+                <input type="radio" name="estado_civil" value="solteiro"> Solteiro(a)
+              </label>
+              <label class="checkbox-label">
+                <input type="radio" name="estado_civil" value="casado"> Casado(a)
+              </label>
+              <label class="checkbox-label">
+                <input type="radio" name="estado_civil" value="viuvo"> Viúvo(a)
+              </label>
+              <label class="checkbox-label">
+                <input type="radio" name="estado_civil" value="divorciado"> Divorciado(a)
+              </label>
+              <label class="checkbox-label">
+                <input type="radio" name="estado_civil" value="separado"> Separado(a)
+              </label>
+            </div>
+
+            <div class="form-field">
+              <label for="data-visita">Data que nos visitou:</label>
+              <input type="date" id="data-visita" name="data-visita">
+            </div>
+
+            <h3>Tem parentes ou amigos na PIBCG?</h3>
+            <div class="radio-group">
+              <label class="radio-label">
+                <input type="radio" name="tem_parentes" value="sim"> Sim
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="tem_parentes" value="nao"> Não
+              </label>
+            </div>
+
+            <div class="form-field">
+              <label for="quem">Quem:</label>
+              <input type="text" id="quem" name="quem">
+            </div>
+          </div>
+
+          <div class="button-group">
+            <button type="button" id="next-btn" class="btn primary">Próxima Página</button>
+          </div>
+        </div>
+
+        <!-- Página 2 - Decisões -->
+        <div class="form-page" id="page2">
+          <div class="form-section">
+            <h3>Minha Decisão</h3>
+            <div class="checkbox-group vertical">
+              <label class="checkbox-label">
+                <input type="checkbox" name="decisao" value="aceitar_jesus"> Estou recebendo a Jesus como meu Salvador e Senhor
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="decisao" value="reconciliacao"> Quero pedir minha reconciliação com Cristo e Igreja
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="decisao" value="estudo_biblico"> Quero receber estudo bíblico
+              </label>
+            </div>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label for="melhor-dia">Melhor dia:</label>
+                <input type="text" id="melhor-dia" name="melhor-dia">
+              </div>
+              <div class="form-field">
+                <label for="melhor-hora">Melhor hora:</label>
+                <input type="text" id="melhor-hora" name="melhor-hora">
+              </div>
+            </div>
+
+            <div class="checkbox-group vertical">
+              <label class="checkbox-label">
+                <input type="checkbox" name="decisao" value="batismo"> Quero ser batizado
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="decisao" value="membro"> Quero me tornar membro
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="decisao" value="falar_pastor"> Quero falar com o Pastor
+              </label>
+            </div>
+
+            <div class="checkbox-group inline">
+              <label class="checkbox-label">
+                <input type="checkbox" name="decisao" value="falar_diacono"> Diácono
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="decisao" value="falar_vice"> Vice-presidente
+              </label>
+            </div>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label for="falar-dia">Melhor dia:</label>
+                <input type="text" id="falar-dia" name="falar-dia">
+              </div>
+              <div class="form-field">
+                <label for="falar-hora">Melhor hora:</label>
+                <input type="text" id="falar-hora" name="falar-hora">
+              </div>
+            </div>
+
+            <h3>Aceito visitas em minha residência:</h3>
+            <div class="form-field">
+              <input type="text" id="aceito-visitas" name="aceito-visitas">
+            </div>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label for="visita-dia">Dia da semana:</label>
+                <input type="text" id="visita-dia" name="visita-dia">
+              </div>
+              <div class="form-field">
+                <label for="visita-hora">Melhor horário:</label>
+                <input type="text" id="visita-hora" name="visita-hora">
+              </div>
+            </div>
+
+            <h3>Quero um culto em minha residência</h3>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="culto-dia">Dia da semana (seg a sáb):</label>
+                <input type="text" id="culto-dia" name="culto-dia">
+              </div>
+              <div class="form-field">
+                <label for="culto-hora">Melhor horário:</label>
+                <input type="text" id="culto-hora" name="culto-hora">
+              </div>
+            </div>
+
+            <h3>Peço oração por:</h3>
+            <div class="checkbox-group vertical">
+              <label class="checkbox-label">
+                <input type="checkbox" name="oracao" value="vida"> Minha Vida
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="oracao" value="relacionamento"> Meu relacionamento conjugal
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="oracao" value="filhos"> Meus filhos
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="oracao" value="saude"> Saúde
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="oracao" value="emprego"> Emprego
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="oracao" value="outro" id="outro-motivo-check"> Outro motivo:
+              </label>
+                <input type="text" id="outro-motivo" name="outro-motivo" class="another-reason" placeholder="Especifique o motivo">
+            </div>
+
+            <h3>Dê sua opinião sobre</h3>
+            <div class="rating-group">
+              <div class="rating-item">
+                <span class="rating-label">Recepção:</span>
+                <div class="rating-options">
+                  <label class="radio-label">
+                    <input type="radio" name="recepcao" value="boa"> Boa
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" name="recepcao" value="razoavel"> Razoável
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" name="recepcao" value="ruim"> Ruim
+                  </label>
+                </div>
+              </div>
+              <div class="rating-item">
+                <span class="rating-label">Música:</span>
+                <div class="rating-options">
+                  <label class="radio-label">
+                    <input type="radio" name="musica" value="boa"> Boa
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" name="musica" value="razoavel"> Razoável
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" name="musica" value="ruim"> Ruim
+                  </label>
+                </div>
+              </div>
+              <div class="rating-item">
+                <span class="rating-label">Pregação:</span>
+                <div class="rating-options">
+                  <label class="radio-label">
+                    <input type="radio" name="pregacao" value="boa"> Boa
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" name="pregacao" value="razoavel"> Razoável
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" name="pregacao" value="ruim"> Ruim
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="convidado-por">Fui convidado por:</label>
+              <input type="text" id="convidado-por" name="convidado-por">
+            </div>
+
+            <div class="form-field">
+              <label for="comentario">Faça seu comentário:</label>
+              <textarea id="comentario" name="comentario" rows="3"></textarea>
+            </div>
+          </div>
+
+          <div class="button-group">
+            <button type="button" id="prev-btn" class="btn">Página Anterior</button>
+            <button type="submit" id="submit-btn" class="btn primary">Enviar</button>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <div id="success-message" class="message message--success hidden">
+      <h2 class="message__title">Formulário Enviado com Sucesso!</h2>
+      <p class="message__text">Obrigado por preencher o Cartão de Decisão. Em breve entraremos em contato.</p>
+      <button id="new-form-btn" class="button button--primary">Preencher Novo Formulário</button>
+    </div>
+
+    <aside class="sidebar">
+      <div class="welcome">
+        <h3 class="welcome__title">Parabéns!</h3>
+        <p class="welcome__text">Este formulário marca o início de uma nova etapa em sua vida espiritual. Estamos felizes com sua decisão e queremos caminhar junto com você nessa nova jornada. Deus te abençoe!</p>
+      </div>
+      
+      <div class="agenda">
+        <h4 class="agenda__title">Agenda da Família PIBCG</h4>
+        <div class="agenda__grid">
+          <div class="agenda__day">
+            <h5 class="agenda__day-title">DOMINGO</h5>
+            <ul class="agenda__list">
+              <li class="agenda__item">09h: Escola Bíblica</li>
+              <li class="agenda__item">10h: Culto da Manhã</li>
+              <li class="agenda__item">19h30: Culto da Noite</li>
+            </ul>
+          </div>
+          <div class="agenda__day">
+            <h5 class="agenda__day-title">SEGUNDA A SEXTA</h5>
+            <ul class="agenda__list">
+              <li class="agenda__item">08h30: Oração - PROMI</li>
+              <li class="agenda__item">(Mulheres Intercessoras)</li>
+            </ul>
+          </div>
+          <div class="agenda__day">
+            <h5 class="agenda__day-title">SEGUNDA-FEIRA</h5>
+            <ul class="agenda__list">
+              <li class="agenda__item">19h30: Culto nos lares</li>
+            </ul>
+          </div>
+          <div class="agenda__day">
+            <h5 class="agenda__day-title">TERÇA-FEIRA</h5>
+            <ul class="agenda__list">
+              <li class="agenda__item">8h: Grupo Débora</li>
+              <li class="agenda__item">19h30: Encontros específicos</li>
+            </ul>
+          </div>
+          <div class="agenda__day">
+            <h5 class="agenda__day-title">QUINTA-FEIRA</h5>
+            <ul class="agenda__list">
+              <li class="agenda__item">19h30: Culto de oração</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="church-info">
+        <p class="church-info__text">Av. Getúlio Vargas, 105</p>
+        <p class="church-info__text">Campo Grande, Cariacica-ES</p>
+        <p class="church-info__text">Tel.: (27) 996646076</p>
+        <p class="church-info__text">https://pibcg.com.br</p>
+      </div>
+    </aside>
+  </div>
+
+  <div id="loading-overlay" class="overlay overlay--loading hidden">
+    <div class="spinner"></div>
+    <p class="overlay__text">Enviando formulário...</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

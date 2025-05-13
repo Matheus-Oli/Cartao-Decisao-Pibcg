@@ -1,0 +1,597 @@
+:root {
+  --color-primary: #2a4f9e;
+  --color-primary-light: rgba(42, 79, 158, 0.1);
+  --color-text: #333;
+  --color-text-light: #666;
+  --color-border: #e2e8f0;
+  --color-background: #f5f7fa;
+  --color-background-light: #f8fafc;
+  --color-white: #fff;
+  --color-success: #166534;
+  --color-success-bg: #f0fdf4;
+  --color-success-border: #86efac;
+  
+  --font-family: 'Poppins', sans-serif;
+  
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 2px 10px rgba(0, 0, 0, 0.1);
+  
+  --border-radius-sm: 8px;
+  --border-radius-md: 12px;
+  
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: var(--font-family);
+  line-height: 1.6;
+  color: var(--color-text);
+  background-color: var(--color-background);
+}
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: var(--spacing-md);
+  background-color: var(--color-white);
+  box-shadow: var(--shadow-md);
+  border-radius: var(--border-radius-sm);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+  padding-bottom: var(--spacing-md);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.header__logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+}
+
+.header__logo {
+  width: 64px;
+  height: 64px;
+}
+
+.header__logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: var(--border-radius-sm);
+}
+
+.header__title {
+  text-align: center;
+}
+
+.header__heading {
+  font-size: 20px;
+  color: var(--color-primary);
+  margin: 0;
+  font-weight: 600;
+}
+
+.header__subheading {
+  font-size: 18px;
+  color: var(--color-primary);
+  font-weight: 500;
+  margin: 0;
+}
+
+.header__motto {
+  font-size: 14px;
+  font-style: italic;
+  color: var(--color-text-light);
+  margin-top: var(--spacing-xs);
+}
+
+.header__verse {
+  font-size: 12px;
+  color: var(--color-text-light);
+}
+
+.header__info {
+  text-align: center;
+}
+
+.header__info-text {
+  margin: 0;
+  line-height: 1.4;
+  font-size: 14px;
+  color: var(--color-text-light);
+}
+
+.form__title {
+  text-align: center;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-lg);
+  font-size: 20px;
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 2px solid var(--color-primary);
+  position: relative;
+}
+
+.form-page {
+  display: none;
+}
+
+.form-page.active {
+  display: block;
+}
+
+.form-page:first-child {
+  display: block;
+}
+
+.form-section {
+  margin-bottom: var(--spacing-lg);
+  padding: var(--spacing-md);
+  background-color: var(--color-background-light);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
+}
+
+.form-section h3 {
+  color: var(--color-primary);
+  margin-top: var(--spacing-md);
+  margin-bottom: var(--spacing-sm);
+  font-size: 18px;
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.form-field {
+  margin-bottom: var(--spacing-md);
+}
+
+.form-field label {
+  display: block;
+  margin-bottom: var(--spacing-xs);
+  font-weight: 500;
+  color: #444;
+  font-size: 14px;
+}
+
+.form-field input,
+.form-field textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-sm);
+  font-family: var(--font-family);
+  font-size: 16px;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  border-color: var(--color-primary);
+  outline: none;
+  box-shadow: 0 0 0 3px var(--color-primary-light);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-md);
+}
+
+.form-field.small {
+  flex: 0 0 auto;
+  min-width: 80px;
+}
+
+.checkbox-label + .form-field {
+  margin-top: var(--spacing-xs);
+  margin-left: var(--spacing-xl);
+}
+
+.form-field input[name="outro-motivo"] {
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-sm);
+  padding: 10px;
+  width: 100%;
+}
+
+.radio-group,
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+}
+
+.checkbox-group.inline {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.checkbox-group.vertical {
+  flex-direction: column;
+}
+
+.radio-label,
+.checkbox-label {
+  gap: 4px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  padding: 12px;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-sm);
+  min-height: 44px;
+}
+
+.radio-label input,
+.checkbox-label input {
+  margin-right: var(--spacing-sm);
+  border-radius: 4px;
+  height: 20px;
+}
+
+.radio-label input[type="radio"],
+.checkbox-label input[type="checkbox"] {
+  -webkit-appearance: auto;
+  appearance: auto;
+  width: 20px;
+  height: 20px;
+  margin-right: var(--spacing-sm);
+}
+
+.form-field .inline-input {
+  display: inline-block;
+  width: 70%;
+  margin-left: var(--spacing-sm);
+  padding: 8px;
+  height: 36px;
+}
+
+.rating-group {
+  display: grid;
+  gap: 12px;
+}
+
+.rating-item {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-sm);
+  padding: 12px;
+  background-color: var(--color-white);
+  border-radius: var(--border-radius-sm);
+  border: 1px solid var(--color-border);
+}
+
+.rating-label {
+  font-weight: 500;
+  color: var(--color-primary);
+}
+
+.rating-options {
+  display: flex;
+  gap: 12px;
+}
+
+.button-group {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-lg);
+}
+
+.btn {
+  padding: var(--spacing-md);
+  border: none;
+  border-radius: var(--border-radius-sm);
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+  min-height: 48px;
+  width: 100%;
+  background-color: #e0e0e0;
+  color: var(--color-text);
+}
+
+.btn.primary {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.sidebar {
+  margin-top: var(--spacing-xl);
+  background-color: var(--color-background-light);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-md);
+}
+
+.welcome {
+  background-color: var(--color-white);
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius-sm);
+  margin-bottom: var(--spacing-md);
+  text-align: center;
+}
+
+.welcome__title {
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-sm);
+  font-size: 18px;
+}
+
+.welcome__text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #4a5568;
+}
+
+.agenda {
+  background-color: var(--color-white);
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius-sm);
+  margin-bottom: var(--spacing-md);
+}
+
+.agenda__title {
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-md);
+  font-size: 18px;
+  text-align: center;
+}
+
+.agenda__grid {
+  display: grid;
+  gap: var(--spacing-md);
+}
+
+.agenda__day {
+  background-color: var(--color-background-light);
+  padding: 12px;
+  border-radius: var(--border-radius-sm);
+}
+
+.agenda__day-title {
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-sm);
+  font-size: 16px;
+}
+
+.agenda__list {
+  list-style: none;
+  padding: 0;
+}
+
+.agenda__item {
+  font-size: 14px;
+  color: #4a5568;
+  margin-bottom: var(--spacing-xs);
+  padding-left: var(--spacing-md);
+  position: relative;
+}
+
+.agenda__item::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--color-primary);
+}
+
+.church-info {
+  background-color: var(--color-white);
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius-sm);
+  text-align: center;
+}
+
+.church-info__text {
+  margin: var(--spacing-xs) 0;
+  font-size: 14px;
+  color: #4a5568;
+}
+
+.message {
+  text-align: center;
+  padding: var(--spacing-lg) var(--spacing-md);
+  border-radius: var(--border-radius-md);
+  margin: var(--spacing-lg) 0;
+}
+
+.message--success {
+  background-color: var(--color-success-bg);
+  border: 1px solid var(--color-success-border);
+}
+
+.message__title {
+  color: var(--color-success);
+  margin-bottom: var(--spacing-sm);
+  font-size: 20px;
+}
+
+.message__text {
+  color: var(--color-success);
+  margin-bottom: var(--spacing-md);
+  font-size: 16px;
+}
+
+.button--primary {
+  background-color: var(--color-primary);
+  color: white;
+  padding: var(--spacing-md);
+  border: none;
+  border-radius: var(--border-radius-sm);
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+  min-height: 48px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+}
+
+.overlay--loading .spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid var(--color-primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: var(--spacing-md);
+}
+
+.overlay__text {
+  font-size: 16px;
+  color: var(--color-text);
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 1000px;
+    padding: var(--spacing-lg);
+    margin: 20px auto;
+  }
+
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .header__logo-container {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .form-row {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .radio-group,
+  .checkbox-group {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .checkbox-group.vertical {
+    flex-direction: column;
+  }
+
+  .button-group {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .agenda__grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+    .another-reason {
+    display: inline-block;
+    width: 100%;
+    margin-top: 8px;
+    padding: 12px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-sm);
+    font-family: var(--font-family);
+    font-size: 16px;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: var(--color-white);
+    }
+
+    .another-reason:focus {
+    border-color: var(--color-primary);
+    outline: none;
+    box-shadow: 0 0 0 3px var(--color-primary-light);
+    }
+
+    .another-reason {
+    display: inline-block;
+    width: 100%;
+    margin-top: 8px;
+    padding: 12px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-sm);
+    font-family: var(--font-family);
+    font-size: 16px;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: var(--color-white);
+    }
+
+    .another-reason:focus {
+    border-color: var(--color-primary);
+    outline: none;
+    box-shadow: 0 0 0 3px var(--color-primary-light);
+    }
+
+    .prayer-option {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: var(--spacing-md);
+    background-color: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-sm);
+    padding: 12px;
+    }
+
+    .prayer-option .checkbox-label {
+    border: none;
+    padding: 0;
+    margin-bottom: 8px;
+    background-color: transparent;
+    }
+
+    .prayer-option .another-reason {
+    margin-left: 28px;
+    }
+
+    @media (max-width: 767px) {
+        .prayer-option .another-reason {
+            margin-left: 0;
+            margin-top: 12px;
+        }
+    }
+}
