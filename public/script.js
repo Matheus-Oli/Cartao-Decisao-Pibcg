@@ -90,15 +90,14 @@ function validateForm() {
   return true;
 }
 
-// Envio do formulário
 function submitForm() {
   showLoading();
 
-  // Coletar todos os dados do formulário
+  const form = document.querySelector('form');
   const formData = new FormData(form);
   const formValues = {};
 
-  // Converter formData para objeto
+  // Converter os dados do formulário em objeto
   for (const [key, value] of formData.entries()) {
     if (formValues[key]) {
       if (!Array.isArray(formValues[key])) {
@@ -110,22 +109,26 @@ function submitForm() {
     }
   }
 
-  // Preparar o email
   const emailData = {
     to: "secretaria@pibcg.org.br",
     subject: "Novo Cartão de Decisão - " + formValues.nome,
     body: formatEmailBody(formValues),
+    replyTo: formValues.email,
   };
 
-  // Simular envio (já que não podemos enviar email diretamente do navegador)
-  simulateEmailSending(emailData)
-    .then(() => {
+  fetch('/send-email', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(emailData),
+  })
+    .then((res) => {
+      if (!res.ok) throw new Error("Erro no servidor");
       hideLoading();
       showSuccess();
     })
-    .catch((error) => {
+    .catch((err) => {
       hideLoading();
-      alert("Erro ao enviar o formulário: " + error.message);
+      alert("Erro ao enviar o formulário: " + err.message);
     });
 }
 

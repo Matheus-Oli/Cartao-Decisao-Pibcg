@@ -1,0 +1,19 @@
+{
+  "name": "novo",
+  "version": "1.0.0",
+  "description": "Este é um projeto digital do **Cartão de Decisão** feito por mim com o intuito de ser utilizado pela **Primeira Igreja Batista em Campo Grande (PIBCG)**, com o objetivo de facilitar o registro de decisões, pedidos de oração e informações de visitantes da igreja.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "nodemailer": "^7.0.3"
+  }
+}
