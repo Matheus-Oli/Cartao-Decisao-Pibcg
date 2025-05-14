@@ -1,6 +1,6 @@
 # Cartão de Decisão - PIBCG 🕊️
 
-![Logo da PIBCG](./public/img/PIBCG-Logo.png)
+<img src="./public/img/PIBCG-Logo.png" alt="Logo da PIBCG" width="200">
 
 Projeto digital do **Cartão de Decisão** desenvolvido para a **Primeira Igreja Batista em Campo Grande (PIBCG)**. O objetivo é facilitar o registro de decisões espirituais, pedidos de oração e informações de visitantes da igreja.
 
